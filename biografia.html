@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Anabella - Publicidade e Modelos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Anabella Agency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Depoimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+      <div class="container">
+        <h1>Bem-vindo à Anabella Agency</h1>
+        <p>
+          Conectamos marcas a influenciadores e modelos para campanhas de
+          sucesso.
+        </p>
+        <a href="#about" class="btn btn-primary">Saiba Mais</a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p>
+          Somos uma agência de publicidade especializada em conectar marcas a
+          modelos e influenciadores de alta performance. Com anos de
+          experiência, garantimos que sua marca será representada com
+          criatividade e impacto.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Serviços</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Gerenciamento de Campanhas</h5>
+                <p class="card-text">
+                  Criamos e gerenciamos campanhas publicitárias sob medida para
+                  sua marca.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Seleção de Modelos</h5>
+                <p class="card-text">
+                  Oferecemos um banco de talentos diversificado para atender
+                  suas necessidades.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Parcerias com Influenciadores</h5>
+                <p class="card-text">
+                  Conectamos marcas a influenciadores que geram impacto e
+                  resultados.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2 class="section-title">Portfólio</h2>
+        <p>Confira alguns dos nossos projetos e colaborações.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="images/portfolio1.jpg"
+              class="img-fluid rounded"
+              alt="Projeto 1"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/portfolio2.jpg"
+              class="img-fluid rounded"
+              alt="Projeto 2"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              src="images/portfolio3.jpg"
+              class="img-fluid rounded"
+              alt="Projeto 3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+        <blockquote class="blockquote">
+          <p>
+            "A Anabella Agency transformou nossa marca com campanhas incríveis.
+            Altamente recomendados!"
+          </p>
+          <footer class="blockquote-footer">Cliente Satisfeito</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p>Entre em contato conosco para saber mais sobre nossos serviços.</p>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Seu Nome"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Seu E-mail"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Sua Mensagem"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Anabella Agency. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

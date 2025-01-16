@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Bella Agency</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="bg-light-pink py-3">
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Transforme sua Vida com Modelos e Influencers</h1>
+          <p>
+            Conecte-se com os melhores influenciadores e modelos para sua marca.
+          </p>
+          <a href="#contato" class="btn">Saiba Mais</a>
+        </div>
+      </section>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+          <a class="navbar-brand text-pink fw-bold" href="#home"
+            >Anna Bella Agency</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-pink" href="#sobre">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-pink" href="#portfolios">Portfólio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-pink" href="#contato">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre" class="about-section">
+        <div class="about-header">
+          <div class="container text-center mb-4">
+            <img
+              src="imagens/logo.png"
+              alt="Ana Bella"
+              class="img-fluid rounded shadow mb-4"
+            />
+            <h2 class="about-title">Sobre Nós</h2>
+            <p class="about-description">
+              Somos uma agência especializada em conectar modelos e
+              influenciadores com grandes marcas. Acreditamos que cada pessoa
+              tem uma história única e ajudamos nossos talentos a se destacar no
+              mundo digital e na indústria da moda. Se você sonha em ser o rosto
+              de campanhas icônicas, ou se já é um influenciador em ascensão,
+              estamos aqui para impulsionar sua carreira!
+            </p>
+          </div>
+        </div>
+
+        <!-- Texto e Imagem (Primeiro Bloco) -->
+        <div class="about-content first-content">
+          <div class="about-text left">
+            <h3>Nossa Missão</h3>
+            <p>
+              Somos apaixonados por transformar ideias em soluções criativas e
+              eficazes. Nossa missão é ajudar você a alcançar seus objetivos.
+            </p>
+          </div>
+          <div class="about-image right">
+            <img src="imagens/sobre1.jpg" alt="Nossa Missão" />
+          </div>
+        </div>
+
+        <!-- Texto e Imagem Alternados (Segundo Bloco) -->
+        <div class="about-content second-content">
+          <div class="about-text bottom">
+            <h3>O Que Nos Move</h3>
+            <p>
+              Trabalhamos com dedicação e inovação, buscando sempre superar
+              expectativas e construir relações duradouras com nossos clientes.
+            </p>
+          </div>
+          <div class="about-image right">
+            <img src="imagens/sobre2.jpg" alt="O Que Nos Move" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Portfólio -->
+      <section id="portfolios" class="container text-center mt-5">
+        <h1>Nosso Portfólio Inspirador</h1>
+        <p>
+          Explore nossos projetos mais icônicos e colaborações de sucesso com
+          modelos e influenciadores talentosos. Descubra como transformamos
+          visões em realidade, criando conexões poderosas entre marcas e
+          talentos únicos.
+        </p>
+        <div class="containerCarousel">
+          <div class="content">
+            <div class="introduce"></div>
+            <div class="thumbnail-list">
+              <div class="wrapper"></div>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <button class="next-button">Next</button>
+            <span class="line"></span>
+            <span class="ordinal-number"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Contato Otimizada -->
+      <section id="contato" class="py-5 bg-light">
+        <div class="container">
+          <div class="row text-center mb-4">
+            <div class="col">
+              <h2 class="text-pink">Entre em Contato</h2>
+              <p class="text-muted">
+                Pronto para dar o próximo passo na sua carreira? Nossa equipe
+                está à disposição para ajudar você a conquistar novos
+                horizontes. Entre em contato conosco agora!
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <!-- Informações de Contato -->
+            <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+              <h4 class="text-pink mb-3">Informações de Contato</h4>
+              <p class="text-muted mb-2">
+                <i class="bi bi-envelope-fill text-pink me-2"></i>
+                <a href="mailto:contato@anabella.com" class="text-muted"
+                  >contato@anabella.com</a
+                >
+              </p>
+              <p class="text-muted mb-2">
+                <i class="bi bi-telephone-fill text-pink me-2"></i>
+                <a href="tel:+5511999999999" class="text-muted"
+                  >+55 (11) 99999-9999</a
+                >
+              </p>
+              <p class="text-muted mb-2">
+                <i class="bi bi-geo-alt-fill text-pink me-2"></i>
+                Rua Inspiração, 123 - São Paulo, SP
+              </p>
+              <div class="mt-4">
+                <a href="#" class="btn btn-outline-pink btn-sm me-2">
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+                <a href="#" class="btn btn-outline-pink btn-sm">
+                  <i class="bi bi-facebook"></i> Facebook
+                </a>
+              </div>
+            </div>
+
+            <!-- Formulário de Contato -->
+            <div class="col-lg-7 border-form">
+              <form
+                action="mailto:contato@anabella.com"
+                method="POST"
+                enctype="text/plain"
+              >
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome completo"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Seu melhor e-mail"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="assunto"
+                    name="assunto"
+                    placeholder="Sobre o que você quer falar?"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea
+                    class="form-control"
+                    id="mensagem"
+                    name="mensagem"
+                    rows="4"
+                    placeholder="Escreva sua mensagem aqui..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-pink w-100">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-5">
+      <div class="container">
+        <!-- Links rápidos -->
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Links Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="#sobre" class="text-white">Sobre Nós</a></li>
+              <li>
+                <a href="#politicas" class="text-white"
+                  >Políticas de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="#termos" class="text-white">Termos de Serviço</a>
+              </li>
+              <li><a href="#contato" class="text-white">Contato</a></li>
+              <li><a href="#faq" class="text-white">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Informações úteis -->
+          <div class="col-md-4 mb-4">
+            <h5>Informações Úteis</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Rua Inspiração, 123 - São
+                Paulo, SP
+              </li>
+              <li>
+                <a href="mailto:contato@anabella.com" class="text-white"
+                  ><i class="bi bi-envelope-fill"></i> contato@anabella.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+5511999999999" class="text-white"
+                  ><i class="bi bi-telephone-fill"></i> +55 (11) 99999-9999</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Redes sociais -->
+          <div class="col-md-4 mb-4">
+            <h5>Redes Sociais</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white me-2"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="text-white me-2"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+                <a href="#" class="text-white"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+          <p class="mb-0">
+            © 2025 Ana Bella Oficial. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

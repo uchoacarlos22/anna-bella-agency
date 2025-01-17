@@ -12,8 +12,17 @@ body {
   background-color: var(--background-color);
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* * {
+  outline: 2px solid red;
+} */
+
 [id] {
-  scroll-margin-top: -35px; /* Ajuste o valor para a altura do header */
+  scroll-margin-top: 35px; /* Ajuste o valor para a altura do header */
 }
 
 /* Hero Section */
@@ -42,9 +51,9 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    left: 50%;
+    left: 180px;
     transform: translate(-50%, -50%);
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -99,19 +108,72 @@ body {
   }
 }
 
-nav {
+/* Estilo inicial do navbar */
+#navbar {
+  position: relative; /* Posição inicial */
+  margin-top: -58px; /* Espaçamento para posicionar abaixo do hero */
   background-color: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  z-index: 150;
+  border: 2px solid var(--primary-color); /* Borda decorativa */
+  border-radius: 0 0 5px 5px;
+  transition: all 0.3s ease-in-out; /* Suavidade na transição */
 }
 
+/* Estilo quando fixo ao topo */
+#navbar.sticky {
+  position: fixed; /* Fixa no topo */
+  top: 0;
+  margin-top: 0; /* Remove o espaçamento ao ser fixado */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+/* Estilo dos links do navbar */
 nav a {
   color: var(--secondary-color) !important;
   font-weight: bold;
-  transition: color 0.3s ease-in-out; /* Transição suave para hover */
+  transition: color 0.3s ease-in-out;
 }
 
+/* Estilo ao passar o mouse sobre os links */
 nav a:hover {
-  color: #ffb6c1; /* Rosa mais suave ao passar o mouse */
+  color: #ffb6c1;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: 2px solid var(--primary-color);
+}
+
+[type="button"]:not(:disabled) {
+  border: 2px solid var(--primary-color);
+}
+
+.custom-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 58px; /* Largura do ícone */
+  height: 50px; /* Altura total do ícone */
+  background: none; /* Remove o fundo padrão do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px;
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+  padding: 10px; /* Remove o padding padrão */
+}
+
+.custom-toggler span {
+  display: block;
+  width: 100%; /* Largura das linhas */
+  height: 3px; /* Espessura das linhas */
+  background-color: var(--primary-color); /* Cor das linhas */
+  border-radius: 2px; /* Suaviza as bordas das linhas */
+  transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.custom-toggler:hover span {
+  background-color: var(--primary-color); /* Altere a cor ao passar o mouse */
 }
 
 section {
@@ -119,12 +181,12 @@ section {
 }
 
 section.bg-light-pink {
-  background-color: #ffe4e1; /* Rosa claro para seções */
+  background-color: #ffe4e1;
 }
 
 img {
-  border-radius: 8px; /* Bordas arredondadas para imagens */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave nas imagens */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -151,21 +213,20 @@ h2 {
 }
 
 .about-section::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Um fundo semitransparente */
-  z-index: 1; /* Coloca a camada acima da imagem de fundo */
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .about-header,
 .about-title,
 .about-description {
   position: relative;
-  z-index: 2; /* Coloca o texto acima da camada semitransparente */
+  z-index: 2;
 }
 
 .about-header {
@@ -179,14 +240,14 @@ h2 {
   opacity: 0;
   color: #000;
   transform: translateY(-30px);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Mais lento */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .about-description {
   font-size: 1.2rem;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Mais lento */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .about-content {
@@ -195,7 +256,7 @@ h2 {
   justify-content: space-between;
   margin-top: 130px;
   opacity: 0;
-  transition: opacity 2s ease-out, transform 2s ease-out; /* Mais lento */
+  transition: opacity 2s ease-out, transform 2s ease-out;
   border-radius: 10px;
 }
 
@@ -245,7 +306,7 @@ h2 {
   padding: 20px;
   text-align: left;
   opacity: 0;
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Mais lento */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .about-text h3 {
@@ -255,18 +316,18 @@ h2 {
 
 /* Texto vindo da esquerda */
 .about-content:nth-child(odd) .about-text {
-  transform: translateX(-30px); /* Vem da esquerda */
+  transform: translateX(-30px);
 }
 
 /* Texto vindo da direita */
 .about-content:nth-child(even) .about-text {
-  transform: translateX(30px); /* Vem da direita */
+  transform: translateX(30px);
 }
 
 .about-image {
   padding: 20px;
   opacity: 0;
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Mais lento */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .about-image img {
@@ -668,17 +729,31 @@ button:hover {
 
 /* Estilo do Formulário */
 #contato .form-control {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+}
+
 .border-form {
   flex: 0 0 auto;
   width: 58.33333333%;
-  border: 2px solid red;
+  border: 2px solid #ff4081;
   padding: 20px;
   border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .border-form {
+    width: 97%;
+    padding: 10px;
+    margin: 5px;
+  }
 }
 
 #contato .form-control:focus {

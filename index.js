@@ -309,43 +309,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sectionAbout = document.querySelector(".about-section");
-  const revealElements = document.querySelectorAll(
-    ".about-title, .about-description, .about-content, .about-text, .about-image"
+  const editorialElements = document.querySelectorAll(
+    "#sobre .about-header, #sobre .about-grid-content"
   );
 
-  // Função para adicionar e remover animações
-  function handleIntersection(entry, target) {
-    if (entry.isIntersecting) {
-      // Se pelo menos 50% do bloco estiver visível, aplica o efeito
-      if (target.classList.contains('about-text')) {
-        target.classList.add('reveal', 'left');
-      } else if (target.classList.contains('about-image')) {
-        target.classList.add('reveal', 'top');
-      } else {
-        target.classList.add('reveal');
-      }
-    } else {
-      // Se o bloco sair de vista, remove o efeito
-      target.classList.remove('reveal', 'left', 'right', 'top', 'bottom');
-    }
-  }
 
-  // Função para criar observers para cada bloco
-  revealElements.forEach(function (element) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => handleIntersection(entry, element));
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.6, // Ativa o efeito quando pelo menos 50% do bloco estiver visível
-      }
-    );
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-    observer.observe(element);
-  });
+  const editorialObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, observerOptions);
+
+  editorialElements.forEach(el => editorialObserver.observe(el));
 });
 
 // Detectar o scroll para adicionar/remover classe "sticky"
